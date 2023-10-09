@@ -7,10 +7,8 @@ import { environment } from 'src/enviroments/enviroments';
   styleUrls: ['./app.component.css']
 })
 
-
-
 export class AppComponent implements OnInit{
-  url = JSON.parse(environment.map);
+  url:any = environment.args;
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
