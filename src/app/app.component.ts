@@ -10,7 +10,7 @@ import { environment } from 'src/enviroments/enviroments';
 
 
 export class AppComponent implements OnInit{
-  url = environment.url;
+  url = JSON.parse(environment.map);
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
