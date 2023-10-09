@@ -7,8 +7,7 @@ RUN sed -i 's/APIURL/'"$TITLE"'/g' ./src/enviroments/enviroments.ts
 RUN npm install
 RUN npm run build
 
-
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged as nginx
 COPY --from=node /app/dist/prueba /usr/share/nginx/html
 
 #### don't know what this is, but cool and techy
